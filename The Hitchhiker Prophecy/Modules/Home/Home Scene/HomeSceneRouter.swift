@@ -19,6 +19,13 @@ extension HomeSceneRouter: HomeSceneRoutingLogic {
     func routeToCharacterDetailsWithCharacter(at index: Int) {
         guard let character = dataStore?.result?.results[index] else { return }
         let characterDetailsViewController = CharacterDetailsSceneConfigurator.configure(with: character)
-        viewController?.present(characterDetailsViewController, animated: true)
+        
+        let transition = CATransition()
+        transition.duration = 2.0
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
+        viewController?.navigationController?.view.layer.add(transition, forKey: nil)
+        viewController?.navigationController?.pushViewController(characterDetailsViewController, animated: false)
+        
     }
 }
