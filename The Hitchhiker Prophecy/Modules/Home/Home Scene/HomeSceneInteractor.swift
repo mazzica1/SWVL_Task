@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CryptoKit
 
 class HomeSceneInteractor: HomeSceneDataStore {
     
@@ -22,10 +23,17 @@ class HomeSceneInteractor: HomeSceneDataStore {
 }
 
 extension HomeSceneInteractor: HomeSceneBusinessLogic {
+    
+    func getMD5(string : String)->String{
+        let computed = Insecure.MD5.hash(data: string.data(using: .utf8)!)
+        return computed.map { String(format: "%02hhx", $0) }.joined()
+    }
     func fetchCharacters() {
         
+        
+        
         let ts = "1"
-        let hash = "" // TODO: Implement
+        let hash = getMD5(string: "\(ts)\(NetworkConstants.privateKey)\(NetworkConstants.publicKey)")
         let limit = HomeScene.Search.Constants.searchPageLimit
         let offset = result?.offset ?? 0
         let input = Characters.Search.Input(timeStamp: ts, apiKey: NetworkConstants.publicKey, hash: hash, offset: offset, limit: limit, orderBy: .modifiedDateDescending)

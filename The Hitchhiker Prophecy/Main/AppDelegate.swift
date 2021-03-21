@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppLibManager.configure()
         ThemeManager.configure()
         AppWindowManager.setupWindow()
+        
         return true
     }
 }

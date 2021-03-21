@@ -17,5 +17,33 @@ class HomeScenePresneter: HomeScenePresentationLogic {
     
     func presentCharacters(_ response: HomeScene.Search.Response) {
         // TODO: Implement
+        switch response {
+        case .success(let characters):
+            var viewModelArr: [HomeScene.Search.ViewModel] = []
+            for character in characters.data.results {
+                
+                let imageUrl = "\(character.thumbnail.path)/\(CharacterDetailsScene.Constants.ImageSize.Portrait.fantastic.rawValue).\(character.thumbnail.thumbnailExtension)"
+                
+                let characterVM = HomeScene.Search.ViewModel(name: character.name,
+                                                                    desc: character.resultDescription,
+                                                                    imageUrl: imageUrl,
+                                                                    comics: character.comics.items.reduce(into: String(), { (result, object) in
+                                                                        result.append(object.name)
+                                                                    }),
+                                                                    series: character.series.items.reduce(into: String(), { (result, object) in
+                                                                        result.append(object.name)
+                                                                    }),
+                                                                    stories: character.stories.items.reduce(into: String(), { (result, object) in
+                                                                        result.append(object.name)
+                                                                    }),
+                                                                    events: character.events.items.reduce(into: String(), { (result, object) in
+                                                                        result.append(object.name)
+                                                                    }))
+                viewModelArr.append(characterVM)
+            }
+            displayView?.didFetchCharacters(viewModel: viewModelArr)
+        case .failure(let error):
+            displayView?.failedToFetchCharacters(error: error)
+        }
     }
 }
