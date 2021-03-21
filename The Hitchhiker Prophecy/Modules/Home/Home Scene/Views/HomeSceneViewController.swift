@@ -28,11 +28,16 @@ class HomeSceneViewController: UIViewController ,UICollectionViewDataSource,UICo
     @IBAction @objc func changeLayoutTapped(_ sender: UIButton) {
         isHorizontal = !isHorizontal
         if isHorizontal {
-            collectionViewFlowLayout.scrollDirection = .horizontal
+            UIView.animate(withDuration: 10.0, delay: 0.0, options: .curveEaseIn, animations: { [self] in
+                collectionViewFlowLayout.scrollDirection = .horizontal
+            })
         } else {
-            collectionViewFlowLayout.scrollDirection = .vertical
+            UIView.animate(withDuration: 10.0, delay: 0.0, options: .curveEaseIn, animations: { [self] in
+                collectionViewFlowLayout.scrollDirection = .vertical
+            })
+            
         }
-        collectionView.reloadData()
+        //collectionView.reloadData()
     }
     //Data Source
     func numberOfSections(in collectionView: UICollectionView) -> Int {
