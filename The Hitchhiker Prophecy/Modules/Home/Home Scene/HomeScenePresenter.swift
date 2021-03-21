@@ -21,7 +21,7 @@ class HomeScenePresneter: HomeScenePresentationLogic {
             var viewModelArr: [HomeScene.Search.ViewModel] = []
             for character in characters.data.results {
                 
-                let imageUrl = "\(character.thumbnail.path)/\(CharacterDetailsScene.Constants.ImageSize.Portrait.fantastic.rawValue).\(character.thumbnail.thumbnailExtension)"
+                let imageUrl = "\(character.thumbnail.path)/standard_amazing.\(character.thumbnail.thumbnailExtension)"
                 
                 let characterVM = HomeScene.Search.ViewModel(name: character.name,
                                                                     desc: character.resultDescription,

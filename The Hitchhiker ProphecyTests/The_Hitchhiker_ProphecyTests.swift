@@ -17,11 +17,36 @@ class The_Hitchhiker_ProphecyTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
 
+    class DummyDisplayView:HomeSceneDisplayView{
+        var interactor: HomeSceneBusinessLogic?
+        
+        var router: HomeSceneRoutingLogic?
+        var e : XCTestExpectation?
+        
+        func didFetchCharacters(viewModel: [HomeScene.Search.ViewModel]){
+            XCTAssertTrue(viewModel.count > 0 )
+            e?.fulfill()
+        }
+        func failedToFetchCharacters(error: Error){
+            XCTAssertNil(error )
+            e?.fulfill()
+        }
+    }
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let dummy = DummyDisplayView()
+        
+        dummy.e = expectation(description: "Alamofire")
+        
+        let Interactor = HomeSceneInteractor(worker: HomeSearchWorker(),presenter: HomeScenePresneter(displayView: dummy))
+        Interactor.fetchCharacters()
+        waitForExpectations(timeout: 100.0, handler: nil)
+
     }
+   
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

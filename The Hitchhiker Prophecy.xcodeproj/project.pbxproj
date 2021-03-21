@@ -40,10 +40,28 @@
 		76C7AE482497B8F20053EF25 /* CharacterDetailsSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7AE472497B8F20053EF25 /* CharacterDetailsSceneInteractor.swift */; };
 		76C7AE4A2497BBD40053EF25 /* CharacterDetailsScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7AE492497BBD40053EF25 /* CharacterDetailsScenePresenter.swift */; };
 		76C7AE4F249803460053EF25 /* HomeCharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7AE4D249803460053EF25 /* HomeCharacterCollectionViewCell.swift */; };
+		9B8021C5FC374F45D702A347 /* Pods_The_Hitchhiker_ProphecyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C8612912CB3F610673717E /* Pods_The_Hitchhiker_ProphecyTests.framework */; };
 		A9F01E9524E1ED350034ABB9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F01E9424E1ED350034ABB9 /* ThemeManager.swift */; };
 		A9F01E9724E1ED9B0034ABB9 /* AppLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F01E9624E1ED9B0034ABB9 /* AppLibraryManager.swift */; };
 		A9F01E9924E1EE560034ABB9 /* AppWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F01E9824E1EE560034ABB9 /* AppWindowManager.swift */; };
 		B827CE5A2607E7D700C4558A /* HomeCharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7AE4E249803460053EF25 /* HomeCharacterCollectionViewCell.xib */; };
+		B827CE5D2607F62000C4558A /* HomeSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD2903249571C9006AF9D0 /* HomeSceneInteractor.swift */; };
+		B827CE602607F65900C4558A /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF92249276FC003E3ECF /* HomeWorker.swift */; };
+		B827CE632607F6B100C4558A /* HomeSceneProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD290124956FC8006AF9D0 /* HomeSceneProtocols.swift */; };
+		B827CE662607F6DF00C4558A /* HomeScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD2905249577B9006AF9D0 /* HomeScenePresenter.swift */; };
+		B827CE692607F76C00C4558A /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF9424927760003E3ECF /* HomeScene.swift */; };
+		B827CE6C2607F79600C4558A /* CharactersSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF88249268BA003E3ECF /* CharactersSearch.swift */; };
+		B827CE6F2607F7C000C4558A /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF852492651D003E3ECF /* Characters.swift */; };
+		B827CE722607F7DA00C4558A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF7724925B32003E3ECF /* NetworkError.swift */; };
+		B827CE752607F7E600C4558A /* CharactersNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF8F24926F7F003E3ECF /* CharactersNetworkService.swift */; };
+		B827CE782607F7F800C4558A /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF7B24925D14003E3ECF /* NetworkConstants.swift */; };
+		B827CE812607F89E00C4558A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF8D24926F55003E3ECF /* NetworkService.swift */; };
+		B827CE842607F8AA00C4558A /* CharacterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF8024925E15003E3ECF /* CharacterRouter.swift */; };
+		B827CE872607F8B900C4558A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF7E24925DFE003E3ECF /* Router.swift */; };
+		B827CE8A2607F8CA00C4558A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8324913BD40082F8FF /* Request.swift */; };
+		B827CE932607F90B00C4558A /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF8B24926E0E003E3ECF /* Encodable+Dictionary.swift */; };
+		B827CE962607F91300C4558A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D65F8124913B760082F8FF /* SessionManager.swift */; };
+		B827CE992607F91700C4558A /* URL_Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019ACF8224925EB5003E3ECF /* URL_Generator.swift */; };
 		C3A19B09940FB9B0F7AADF11 /* Pods_The_Hitchhiker_Prophecy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DE673059370D3D001872E6 /* Pods_The_Hitchhiker_Prophecy.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +104,9 @@
 		01D65F8124913B760082F8FF /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		01D65F8324913BD40082F8FF /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		15699D3B559570DF31F0A14D /* Pods-The Hitchhiker Prophecy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Hitchhiker Prophecy.debug.xcconfig"; path = "Target Support Files/Pods-The Hitchhiker Prophecy/Pods-The Hitchhiker Prophecy.debug.xcconfig"; sourceTree = "<group>"; };
+		18DFAB8D6A2E60B3B5F0D1CD /* Pods-The Hitchhiker ProphecyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Hitchhiker ProphecyTests.release.xcconfig"; path = "Target Support Files/Pods-The Hitchhiker ProphecyTests/Pods-The Hitchhiker ProphecyTests.release.xcconfig"; sourceTree = "<group>"; };
 		26DE673059370D3D001872E6 /* Pods_The_Hitchhiker_Prophecy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Hitchhiker_Prophecy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7330E2F0351084864ED8A903 /* Pods-The Hitchhiker ProphecyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Hitchhiker ProphecyTests.debug.xcconfig"; path = "Target Support Files/Pods-The Hitchhiker ProphecyTests/Pods-The Hitchhiker ProphecyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76A9C3C124A40FB4001E707F /* HomeSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSceneViewController.xib; sourceTree = "<group>"; };
 		76C7AE362497AD910053EF25 /* CharacterDetailsSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsSceneViewController.swift; sourceTree = "<group>"; };
 		76C7AE372497AD910053EF25 /* CharacterDetailsSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsSceneViewController.xib; sourceTree = "<group>"; };
@@ -101,6 +121,7 @@
 		A9F01E9424E1ED350034ABB9 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A9F01E9624E1ED9B0034ABB9 /* AppLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLibraryManager.swift; sourceTree = "<group>"; };
 		A9F01E9824E1EE560034ABB9 /* AppWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowManager.swift; sourceTree = "<group>"; };
+		C1C8612912CB3F610673717E /* Pods_The_Hitchhiker_ProphecyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Hitchhiker_ProphecyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CF87B7C4F610B29507908C /* Pods-The Hitchhiker Prophecy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Hitchhiker Prophecy.release.xcconfig"; path = "Target Support Files/Pods-The Hitchhiker Prophecy/Pods-The Hitchhiker Prophecy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8021C5FC374F45D702A347 /* Pods_The_Hitchhiker_ProphecyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				26DE673059370D3D001872E6 /* Pods_The_Hitchhiker_Prophecy.framework */,
+				C1C8612912CB3F610673717E /* Pods_The_Hitchhiker_ProphecyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,6 +384,8 @@
 			children = (
 				15699D3B559570DF31F0A14D /* Pods-The Hitchhiker Prophecy.debug.xcconfig */,
 				E3CF87B7C4F610B29507908C /* Pods-The Hitchhiker Prophecy.release.xcconfig */,
+				7330E2F0351084864ED8A903 /* Pods-The Hitchhiker ProphecyTests.debug.xcconfig */,
+				18DFAB8D6A2E60B3B5F0D1CD /* Pods-The Hitchhiker ProphecyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -391,9 +416,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01D65F8024913A160082F8FF /* Build configuration list for PBXNativeTarget "The Hitchhiker ProphecyTests" */;
 			buildPhases = (
+				83AB4AADF8F5245156910DF7 /* [CP] Check Pods Manifest.lock */,
 				01D65F7324913A160082F8FF /* Sources */,
 				01D65F7424913A160082F8FF /* Frameworks */,
 				01D65F7524913A160082F8FF /* Resources */,
+				C5DB91A19D50026FE676695C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -466,6 +493,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		83AB4AADF8F5245156910DF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Hitchhiker ProphecyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B7164F3C045AB94BFBB68811 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,6 +552,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5DB91A19D50026FE676695C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Hitchhiker ProphecyTests/Pods-The Hitchhiker ProphecyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Hitchhiker ProphecyTests/Pods-The Hitchhiker ProphecyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Hitchhiker ProphecyTests/Pods-The Hitchhiker ProphecyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -550,7 +616,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B827CE932607F90B00C4558A /* Encodable+Dictionary.swift in Sources */,
+				B827CE5D2607F62000C4558A /* HomeSceneInteractor.swift in Sources */,
+				B827CE962607F91300C4558A /* SessionManager.swift in Sources */,
+				B827CE662607F6DF00C4558A /* HomeScenePresenter.swift in Sources */,
+				B827CE782607F7F800C4558A /* NetworkConstants.swift in Sources */,
+				B827CE992607F91700C4558A /* URL_Generator.swift in Sources */,
+				B827CE752607F7E600C4558A /* CharactersNetworkService.swift in Sources */,
+				B827CE602607F65900C4558A /* HomeWorker.swift in Sources */,
+				B827CE6F2607F7C000C4558A /* Characters.swift in Sources */,
+				B827CE6C2607F79600C4558A /* CharactersSearch.swift in Sources */,
+				B827CE8A2607F8CA00C4558A /* Request.swift in Sources */,
+				B827CE692607F76C00C4558A /* HomeScene.swift in Sources */,
+				B827CE722607F7DA00C4558A /* NetworkError.swift in Sources */,
 				01D65F7A24913A160082F8FF /* The_Hitchhiker_ProphecyTests.swift in Sources */,
+				B827CE872607F8B900C4558A /* Router.swift in Sources */,
+				B827CE812607F89E00C4558A /* NetworkService.swift in Sources */,
+				B827CE632607F6B100C4558A /* HomeSceneProtocols.swift in Sources */,
+				B827CE842607F8AA00C4558A /* CharacterRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,10 +815,12 @@
 		};
 		01D65F7E24913A160082F8FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7330E2F0351084864ED8A903 /* Pods-The Hitchhiker ProphecyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "The Hitchhiker ProphecyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,10 +836,12 @@
 		};
 		01D65F7F24913A160082F8FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18DFAB8D6A2E60B3B5F0D1CD /* Pods-The Hitchhiker ProphecyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "The Hitchhiker ProphecyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
