@@ -18,20 +18,28 @@ class HomeSceneViewController: UIViewController ,UICollectionViewDataSource,UICo
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var changeLayoutButton: UIButton!
+    @IBOutlet weak var currentLayout: UILabel!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor?.fetchCharacters()
         collectionView.register(HomeCharacterCollectionViewCellNib, forCellWithReuseIdentifier: HomeCharacterCollectionViewCellId)
+        self.changeLayoutButton.accessibilityIdentifier = "changeLayoutButton"
+        self.collectionView.accessibilityIdentifier = "collectionView"
+        
+        
     }
     @IBAction @objc func changeLayoutTapped(_ sender: UIButton) {
         isHorizontal = !isHorizontal
         if isHorizontal {
+            self.currentLayout.text = "Horizontal"
             UIView.animate(withDuration: 10.0, delay: 0.0, options: .curveEaseIn, animations: { [self] in
                 collectionViewFlowLayout.scrollDirection = .horizontal
             })
         } else {
+            self.currentLayout.text = "Vertical"
             UIView.animate(withDuration: 10.0, delay: 0.0, options: .curveEaseIn, animations: { [self] in
                 collectionViewFlowLayout.scrollDirection = .vertical
             })

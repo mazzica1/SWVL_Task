@@ -10,8 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeSceneViewController" customModule="The_Hitchhiker_Prophecy" customModuleProvider="target">
             <connections>
+                <outlet property="changeLayoutButton" destination="blh-Zt-7PU" id="15L-7g-2Kr"/>
                 <outlet property="collectionView" destination="ir0-bP-ilq" id="8Od-UK-X7N"/>
                 <outlet property="collectionViewFlowLayout" destination="meT-FV-jmv" id="3R0-Qw-1W4"/>
+                <outlet property="currentLayout" destination="B6j-Jd-gPO" id="lmw-fA-hft"/>
                 <outlet property="view" destination="WGk-3c-KKJ" id="Olq-EN-8do"/>
             </connections>
         </placeholder>
@@ -42,6 +44,12 @@
                         <action selector="changeLayoutTapped:" destination="-2" eventType="touchUpInside" id="8iu-6c-2NJ"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6j-Jd-gPO">
+                    <rect key="frame" x="20" y="65" width="78" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="p9K-a1-ut4"/>
             <constraints>
@@ -49,8 +57,10 @@
                 <constraint firstItem="ir0-bP-ilq" firstAttribute="top" secondItem="p9K-a1-ut4" secondAttribute="top" constant="50" id="Tc0-ag-eyi"/>
                 <constraint firstItem="p9K-a1-ut4" firstAttribute="trailing" secondItem="ir0-bP-ilq" secondAttribute="trailing" id="Uhn-kn-zBG"/>
                 <constraint firstItem="p9K-a1-ut4" firstAttribute="bottom" secondItem="ir0-bP-ilq" secondAttribute="bottom" constant="10" id="Y4k-eI-QhH"/>
+                <constraint firstItem="B6j-Jd-gPO" firstAttribute="top" secondItem="p9K-a1-ut4" secondAttribute="top" constant="21" id="jJs-fc-yAV"/>
                 <constraint firstItem="ir0-bP-ilq" firstAttribute="leading" secondItem="p9K-a1-ut4" secondAttribute="leading" id="lU6-FA-gpF"/>
                 <constraint firstItem="blh-Zt-7PU" firstAttribute="top" secondItem="p9K-a1-ut4" secondAttribute="top" constant="12" id="xaE-Ne-4cG"/>
+                <constraint firstItem="B6j-Jd-gPO" firstAttribute="leading" secondItem="p9K-a1-ut4" secondAttribute="leading" constant="20" id="yGt-Hh-9ms"/>
             </constraints>
             <point key="canvasLocation" x="186.95652173913044" y="144.64285714285714"/>
         </view>
