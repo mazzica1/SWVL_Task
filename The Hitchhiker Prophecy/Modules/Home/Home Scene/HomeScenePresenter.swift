@@ -16,7 +16,6 @@ class HomeScenePresneter: HomeScenePresentationLogic {
     }
     
     func presentCharacters(_ response: HomeScene.Search.Response) {
-        // TODO: Implement
         switch response {
         case .success(let characters):
             var viewModelArr: [HomeScene.Search.ViewModel] = []

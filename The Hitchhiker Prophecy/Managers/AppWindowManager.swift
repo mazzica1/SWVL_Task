@@ -14,6 +14,8 @@ enum AppWindowManager {
         let controller = HomeSceneConfigurator.configure()
         window.rootViewController = controller
         window.makeKeyAndVisible()
+        //Fix screen not appear because new window created
+        self.window = window
     }
 }
 
